@@ -1,0 +1,214 @@
+body {
+    background-color:rgb(231, 243, 243);
+}
+.white_key {
+    background-color: #fff;
+    height: 100%;
+    z-index: 0;
+}
+
+.black_key {
+    background-color: #244155;
+    height: 60%;
+    z-index: 1;
+}
+
+.piano_key {  
+    border-radius: 2px;
+    opacity: 1;
+    transition: 0.3s;
+    position: absolute;
+    cursor: pointer;
+}
+
+.piano_key:hover {
+    opacity: 0.5
+}
+
+.selected_key {
+    background-color: #368cadbd;
+}
+
+div {
+    display: block;
+}
+
+.keyboard_container {
+    margin: 24px auto;
+    position: relative;
+    filter: drop-shadow(0 3px 2px #0000002c);
+}
+
+.progress_bar_container {
+    /* display: inline-block; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+.progress_bar {
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: rgba(0,0,0,0.2);
+
+}
+
+.chord_button_container{
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 2px 2px #c7c7c7);
+}
+
+.chord_name:hover {
+    opacity: 0.8
+}
+
+.chord_button {
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 124px;
+    justify-content: center;
+    position: relative;
+    width: 124px;
+    border-right: 1px solid rgba(0,0,0,.055);
+}
+
+.chord_button.selected {
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 124px;
+    justify-content: center;
+    position: relative;
+    width: 124px;
+    border-right: 1px solid rgba(0,0,0,.055);
+    background-color: rgb(175, 238, 238);
+}
+
+.chord_name {
+    color: #73767c;
+    font-size: 20px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+input {
+    margin-left: 20px;
+}
+
+.start_button {
+    border-radius: 10px;
+    height: 35px;
+    width: 65px;
+    border-color: #44759e2c;
+    background-color: #c7dff32c;
+    cursor: pointer;
+}
+
+.form_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.edit_button {
+    height: 25px;
+    width: 40px;
+    position: absolute;
+    border-color: #44759e2c;
+    background-color: #c7dff32c;
+    margin-bottom: 100px;
+    margin-left: 80px;
+    margin-top: 10px;
+    border-radius: 100px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.modal {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.title_container {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.title_container.close_button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(217, 231, 241, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#switch_chord {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(252, 245, 250);
+    border-color: #faf1f52c;
+    width: 60px;
+    height: 40px;
+}
+
+#switch_chord.selected {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: rgb(252, 245, 250);
+    border-color: #f0318ad0;
+    width: 60px;
+    height: 40px;
+}
+
+.switch_chord_container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.switch_chord_button_container{
+    margin-top: 4px;
+    margin-left: 4px;
+}

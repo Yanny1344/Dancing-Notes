@@ -1,0 +1,76 @@
+body {
+    background-color:rgb(231, 243, 243);
+}
+
+.examples_button {
+    border-radius: 5px;
+    width: 80px;
+    height: 50px;
+    background-color: rgb(252, 245, 250);
+    border-color: #faf1f52c;
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.doc_button {
+    border-radius: 5px;
+    width: 120px;
+    height: 50px;
+    background-color: rgb(252, 245, 250);
+    border-color: #faf1f52c;
+    margin-left: 23%;
+    cursor: pointer;
+}
+.container {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    background-color: aliceblue;
+    overflow-wrap: break-word;
+}
+
+.title_container {
+    /* margin: auto;
+    padding: 10px;
+    overflow-wrap: break-word;
+    margin-bottom: 30px; */
+    height: 10em;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.title_container h {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.content_container {
+    /* margin: auto;
+    padding: 10px;
+    overflow-wrap: break-word;
+    margin-bottom: 50px; */
+    height: 10em;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.content_container h {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.button_con {
+    margin-bottom: 50px;
+} 
+
+.title {
+    position: relative;
+}

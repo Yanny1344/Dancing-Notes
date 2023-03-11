@@ -1,0 +1,37 @@
+#inputChords {
+    border-color: #44759e2c;
+    border-radius: 4px;
+    height: 35px;
+    width: 250px;
+}
+
+#inputNotes {
+    border-color: #44759e2c;
+    border-radius: 4px;
+    height: 35px;
+    width: 250px;
+}
+
+#inputTime1 {
+    border-color: #44759e2c;
+    border-radius: 4px;
+    height: 35px;
+    width: 250px;
+}
+
+#inputTime2 {
+    border-color: #44759e2c;
+    border-radius: 4px;
+    height: 35px;
+    width: 250px;
+}
+
+.home_button {
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+    background-color: rgb(252, 245, 250);
+    border-color: #faf1f52c;
+    margin-left: 30px;
+    cursor: pointer;
+}

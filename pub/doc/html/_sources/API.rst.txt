@@ -1,0 +1,119 @@
+API
+===
+
+Generate piano keyboard
+-----------------------
+Construct a PianoComponentGenerator object
+
+.. code-block:: javascript
+
+    const piano = new PianoComponentGenerator();
+
+The PianoComponentGenerator object could access the following functions
+
+.. js:function:: piano.setHeight(height)
+
+    Customise and set the height of the piano keyboard to ``height`` before generating it.
+
+   :param Number height: the height of the piano keyboard
+
+.. js:function:: piano.setWidth(width)
+
+    Customise and set the width of the piano keyboard to ``width`` before generating it.
+
+   :param Number width: the width of the piano keyboard
+
+.. js:function:: piano.makeKeyboard(oct_num)
+
+    Generate a piano keyboard with ``oct_num`` octaves. Only support sound for the first two octaves.
+
+   :param Number oct_num: the number of octave that the piano keyboard includes
+
+.. js:function:: piano.selectChord(chord)
+
+    Display the corresponding notes of ``chord`` on the piano keyboard by changing the color of the keys.
+    Valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#.
+
+   :param String chord: the name of a chord
+
+.. js:function:: piano.clearChord(chord)
+
+    Reset the ``chord``'s piano keys to the original color. Valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#
+
+   :param String chord: the name of a chord
+
+.. js:function:: piano.playChord(chord)
+
+    Produce the corresponding sound for ``chord``. Valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#
+
+   :param String chord: the name of a chord
+
+.. js:function:: piano.makeInputField(form_id, textField_id_1, textField_id_2)
+
+    Generate a form element with two text fields that takes users input
+
+   :param String form_id: id of the form element
+   :param String textField_id_1: id of the first text field
+   :param String textField_id_2: id of the second text field
+
+.. js:function:: piano.makeStartButton()
+
+    Generate a start button with text "Start"
+
+.. js:function:: piano.playChords(chords, time_interval, text_field_id_1, text_field_id_2)
+
+    Take users inputs from two text fields and produce sound of the list input chords. 
+    Valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#
+
+   :param Array[String] chords: a list of chords
+   :param Number time_interval: a positive number, the list of chords will finish playing within this time interval
+   :param String text_field_id_1: id of the first input field, usually taking a list of chords as input
+   :param String text_field_id_2: id of the second input field, usually taking a time interval as input
+
+.. js:function:: piano.playMelody(note_list, time_interval, text_field_id_1, text_field_id_2)
+
+    Take users inputs from two text fields and produce sound of the list input notes.
+    Valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#
+
+   :param Array[String] note_list: a list of notes
+   :param Number time_interval: a positive number, the list of notes will finish playing within this time interval
+   :param String text_field_id_1: id of the first input field, usually taking a list of notes as input
+   :param String text_field_id_2: id of the second input field, usually taking a time interval as input
+
+Generate progress bar
+---------------------
+Construct a ProgressBarGenerator object
+
+.. code-block:: javascript
+
+    const progress_bar = new ProgressBarGenerator();
+
+The ProgressBarGenerator object could access the following functions
+
+.. js:function:: progress_bar.makeProgressBar()
+
+    Generate a progress bar that is invisible in the initial state
+
+.. js:function:: progress_bar.startProgressBar(time_interval)
+
+    Start showing the progress bar
+
+   :param Number time_interval: a positive number, the progress bar will end when the time interval passed
+
+
+Generate chord buttons
+----------------------
+Construct a selectChordButtonGenerator object
+
+.. code-block:: javascript
+
+    const chord_buttons = new selectChordButtonGenerator();
+
+The selectChordButtonGenerator object could access the following functions
+
+.. js:function:: chord_buttons.makeButtonList(buttons)
+
+    Generate buttons.length buttons where each of the button is associated with a chord. By clicking the edit button,
+    users are able to modify the associated chord.
+
+   :param Array[String] buttons: a list of chords where valid chords include C, D, E, F, G, A, B, C#, D#, F#, G#, A#
